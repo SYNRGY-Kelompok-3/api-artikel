@@ -4,12 +4,8 @@ import type { Knex } from "knex";
 
 const config: { [key: string]: Knex.Config } = {
     development: {
-        client: "postgresql",
-        connection: {
-            database: "api_kel_3",
-            user: "user01",
-            password: "admin01"
-        }
+        client: "pg",
+        connection: process.env.DATABASE_URL
     },
 
     staging: {
