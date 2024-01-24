@@ -7,7 +7,7 @@
 `[ENDPOINT] /v1/artikel/`
 
 ```url
-[GET] http://localhost:9000/v1/artikel/
+[GET] https://api-artikel.fly.dev/v1/artikel/
 ```
 
 ##### Response
@@ -41,7 +41,7 @@
 `[ENDPOINT] /v1/artikel/:id`
 
 ```url
-[GET] http://localhost:9000/v1/artikel/:id
+[GET] https://api-artikel.fly.dev/v1/artikel/:id
 ```
 
 ##### Response
@@ -72,7 +72,7 @@
 `[ENDPOINT] /v1/artikel/create`
 
 ```url
-[POST] http://localhost:9000/v1/artikel/create
+[POST] https://api-artikel.fly.dev/v1/artikel/create
 ```
 
 ##### Request
@@ -107,7 +107,7 @@
 `[ENDPOINT] /v1/artikel/update/:id`
 
 ```url
-[PUT] http://localhost:9000/v1/artikel/update/:id
+[PUT] https://api-artikel.fly.dev/v1/artikel/update/:id
 ```
 
 ##### Request
@@ -142,7 +142,7 @@
 `[ENDPOINT] /v1/artikel/delete/:id`
 
 ```url
-[DELETE] http://localhost:9000/v1/artikel/delete/:id
+[DELETE] https://api-artikel.fly.dev/v1/artikel/delete/:id
 ```
 
 ##### Response
