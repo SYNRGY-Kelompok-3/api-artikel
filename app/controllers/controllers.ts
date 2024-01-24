@@ -4,6 +4,15 @@ import ArticleService from "../services/article";
 const uuid = require("../../config/utils/uuid");
 const cloudinary = require("../../config/utils/cloudinary");
 
+interface MulterFile {
+  key: string,
+  path: string,
+  mimetype: string,
+  buffer: Buffer,
+  originalname: string,
+  size: number,
+}
+
 const getItem = async (req: Request, res: Response) => {
     const getAll = await new ArticleService().getAll();
 
@@ -25,7 +34,7 @@ const getItemById = async (req: Request, res: Response) => {
     }
 };
 
-const postItem = async (req: Request, res: Response) => {
+const postItem = async (req: Request & {file: MulterFile}, res: Response) => {
     const id = uuid;
     const title = req.body?.title;
     const category = req.body?.category;
@@ -44,7 +53,7 @@ const postItem = async (req: Request, res: Response) => {
     res.status(201).json(addItem);
 };
 
-const putItem = async (req: Request, res: Response) => {
+const putItem = async (req: Request & {file: MulterFile}, res: Response) => {
     const id = Number(req.params.id);
     const title = req.body?.title;
     const category = req.body?.category;
